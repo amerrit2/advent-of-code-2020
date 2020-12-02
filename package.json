@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "day-1": "node day-1/solution.js",
+    "watch": "tsc -w"
   },
   "author": "Adam Merritt <amerrit2@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^14.14.10",
     "typescript": "^4.1.2"
   }
 }
