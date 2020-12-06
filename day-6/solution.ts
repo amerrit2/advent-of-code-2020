@@ -13,10 +13,6 @@ function countUnique(group: string[]) {
 }
 
 function countIntersection(group: string[]) {
-  if (group.length === 1) {
-    return group[0].length;
-  }
-
   return Array.from(group[0]).reduce(
     (count, char) =>
       group.slice(1).every((member) => member.includes(char))
