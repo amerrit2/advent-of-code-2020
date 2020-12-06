@@ -7,9 +7,7 @@ async function getInput() {
 }
 
 function countUnique(group: string[]) {
-  return new Set([
-    ...group.reduce((out, member) => (out = `${out}${member}`), ""),
-  ]).size;
+  return new Set(group.join("")).size;
 }
 
 function countIntersection(group: string[]) {
