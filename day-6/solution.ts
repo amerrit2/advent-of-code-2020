@@ -22,6 +22,23 @@ function countIntersection(group: string[]) {
   );
 }
 
+async function PartTwoOneLine() {
+  `${await readFile(resolve(__dirname, "./input.txt"))}`
+    .split("\r\n\r\n")
+    .map((group) => group.split("\r\n"))
+    .reduce(
+      (sum, group) =>
+        (sum += Array.from(group[0]).reduce(
+          (count, char) =>
+            group.slice(1).every((member) => member.includes(char))
+              ? count + 1
+              : count,
+          0
+        )),
+      0
+    );
+}
+
 async function main() {
   const data = await getInput();
   console.log(
